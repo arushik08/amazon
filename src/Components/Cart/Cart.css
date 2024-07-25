@@ -1,0 +1,125 @@
+.cart-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 100vh; /* Adjust to fit content */
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: box-shadow 0.3s;
+}
+
+.cart-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-image {
+  width: 80px;
+  height: auto;
+  margin-right: 15px;
+  border-radius: 5px; /* Rounded corners for the image */
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-details h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #444;
+}
+
+.cart-item-details p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.quantity-button {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  margin: 0 5px;
+}
+
+.quantity-button:hover {
+  background-color: #005bb5;
+}
+
+.quantity-display {
+  margin: 0 10px;
+  font-size: 1.2em;
+}
+
+.remove-from-cart {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-from-cart:hover {
+  background-color: #ff1a1a;
+}
+
+.buy-now {
+  display: block;
+  margin: 20px auto 0;
+  padding: 12px 20px;
+  background-color: #f0c14b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.buy-now:hover {
+  background-color: #e2a83b;
+}
+
+@media (max-width: 600px) {
+  .cart-container {
+    padding: 15px;
+  }
+
+  .buy-now, .remove-from-cart {
+    width: 100%; /* Full width on small screens */
+    margin-top: 10px; /* Spacing between buttons */
+  }
+}

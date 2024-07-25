@@ -14,7 +14,6 @@ import product from '../Products/Products';
 const Header: React.FC = () => {
   const [isListOpen, setIsListOpen] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
-  const [isSearch, setIsSearch] = useState('');
   const totalItems = useSelector((state: RootState) => state.cart.totalItems);
   const reduxUser = useSelector((state: RootState) => state.usEr.user);
   const navigate = useNavigate();
@@ -42,9 +41,6 @@ const Header: React.FC = () => {
   };
 
    // Filter the products based on the search term
-   const filteredProducts = product.filter(product =>
-    product.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   useEffect(() => {
   
@@ -81,7 +77,7 @@ const Header: React.FC = () => {
               <i className="fas fa-caret-down" />
             </div>
             <input type="text" />
-            <i className="fas fa-search" onClick = {()=>handleSearch()}/>
+            <i className="fas fa-search" />
           </div>
           <div className="flex right">
             <div className="flex lang">
